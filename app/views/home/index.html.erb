@@ -1,0 +1,24 @@
+<div class="col-md-12 soccer-players">
+
+	<h1 class="text-xlarge">Soccer Players</h1><!-- ./h1 -->
+
+	<% if @athletes.empty? %>
+		<ul class="list-group">
+			<li class="list-group-item">No soccer players yet!</li>
+		</ul>
+	<% else %>
+		<% @athletes.each do |player| %>
+			<div class="col-md-4 soccer-player">
+				<div class="soccer-player-container">
+					<img src="https://static.licdn.com/scds/common/u/images/themes/katy/ghosts/person/ghost_person_200x200_v1.png" alt="#{player.name}" />
+					<div class="mask mask-1"></div>
+					<div class="mask mask-2"></div>
+					<div class="content">
+						<h3><%= player.name %></h3>
+						<p><%= link_to "@#{player.twitter_handle.handle}", "https://twitter.com/#{player.twitter_handle.handle}" %></p>
+					</div><!-- ./content -->
+				</div><!-- ./soccer-player-container -->
+			</div><!-- ./soccer-player -->
+		<% end %>
+	<% end %>
+</div><!-- ./col-md-12 -->

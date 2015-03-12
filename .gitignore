@@ -37,3 +37,5 @@ bower.json
 .powenv
 
 # Ignore database.yml
+# Ignore application configuration
+/config/application.yml

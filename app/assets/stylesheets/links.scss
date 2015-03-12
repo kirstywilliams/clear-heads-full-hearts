@@ -1,0 +1,18 @@
+//
+// 	Links
+// --------------------------------------------------
+
+.icon-link:hover{
+	text-decoration: none;
+	i { color: $brand-primary; }
+}
+
+.btn-primary{
+	background-color: $sky-blue;
+	border-color: $sky-blue;
+
+	&:hover{
+		background-color: $sky-blue;
+		border-color: $sky-blue;
+	}
+}
